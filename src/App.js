@@ -1,22 +1,21 @@
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import LoginComponent from './componets/Login/Login.js'
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link, Switch
+} from "react-router-dom";
+import LoginComponent from "./componets/Login/Login";
+import BoardComponent from "./componets/Board/component.Board";
 
 function App() {
   return (
     <div className="App">
-    <Router>
-      <div className="App">
-        <div className="auth-wrapper">
-          <div className="auth-inner">
-            <Routes>
-            <Route exact path="/" element={<LoginComponent />} />
-            </Routes>
-          </div>
-        </div>
-      </div>
-    </Router>
+      <Switch>
+        <Route exact path="/Login" component={LoginComponent} />
+        <Route exact path="/Board" component={BoardComponent} />
+      </Switch>
     </div>
   );
 }

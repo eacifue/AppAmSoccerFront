@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Login.css"
 
 export default class Login extends Component {
   constructor(props) {
@@ -28,11 +29,8 @@ export default class Login extends Component {
     })
       .then(async (res) => await res.json())
       .then((data) => {
-        console.log(data, user, password);
-        if (data.status == "ok") {
-          alert("login successful");
-          //window.localStorage.setItem("token", data.data);
-          window.location.href = "./userDetails";
+        if (data.message == "OK") {
+          window.location.href = "/Board";
         }
       });
   }
