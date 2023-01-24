@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BoardComponent from '../componets/Board/component.Board'
+import LoginComponent from '../../componets/Login/Login'
 
-function Board() {
+function Login() {
     return (
       <div className="App">
       <Router>
@@ -9,7 +9,7 @@ function Board() {
           <div className="auth-wrapper">
             <div className="auth-inner">
               <Routes>
-                <Route exact path="/" element={<BoardComponent />} />
+                <Route exact path="/" element={<LoginComponent />} />
               </Routes>
             </div>
           </div>
@@ -19,4 +19,5 @@ function Board() {
     );
   }
   
-  export default Board;
+  export default Login;
+  
