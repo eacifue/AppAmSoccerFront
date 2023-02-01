@@ -1,13 +1,13 @@
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import HomePage from './pages/Home/Home'
 
+import './App.css';
+import NavBarBase from './components/NavBarBase';
 
 function App() {
   return (
-    <div className="App">
-      <HomePage/>
-    </div>
+    <main>
+      <NavBarBase/>    
+    </main>
+
   );
 }
 
